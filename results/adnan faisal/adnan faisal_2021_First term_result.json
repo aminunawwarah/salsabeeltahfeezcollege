@@ -1,0 +1,42 @@
+{
+	"studentName": "adnan faisal",
+	"examinationYear": "2021",
+	"examinationTerm": "First term",
+	"total": 339,
+	"average": 67.8,
+	"selectedSubjects": [
+		"Arabic",
+		"Civic Education",
+		"Fiqh",
+		"Islamic Studies",
+		"Tajweed"
+	],
+	"testScores": [
+		22,
+		25,
+		21,
+		31,
+		23
+	],
+	"examScores": [
+		43,
+		35,
+		52,
+		52,
+		35
+	],
+	"totalScores": [
+		65,
+		60,
+		73,
+		83,
+		58
+	],
+	"grades": [
+		"B",
+		"B",
+		"A",
+		"A",
+		"C"
+	]
+}

@@ -1,0 +1,135 @@
+<%- include('./partials/dashboard_header.ejs') %>
+
+    <h1 class="dashboard-text">Dashboard</h1>
+    <div class="dashboard-page-sides">
+        <div class="navigations-side">
+            <ul>
+                <li class="side-link">School calendar</li>
+                <li class="side-link">School activities</li>
+                <li class="side-link">Add a new user</li>
+                <li class="side-link">Add a new student</li>
+                <li class="side-link">Remove a student</li>
+                <li class="side-link">Remove a user</li>
+                <li class="side-link">SRMS</li>
+                <li class="side-link">Send a message</li>
+            </ul>
+        </div>
+        <div class="content-side">
+            <div class="welcome-header">
+                <p user>Principal</p>
+            </div>
+            <div class="information">
+                <div class="information-header">
+                    <p class="header-title">School Calendar</p>
+                    <img draggable="false" class="close-information" src="imgs/close.png">
+                </div>
+                <div>
+                    <p>Click the button to view the calendar for the term.</p>
+                    <button view-calendar>View Calander</button>
+                </div>
+            </div>
+            <div class="information">
+                <div class="information-header">
+                    <p class="header-title">School Activities</p>
+                    <img draggable="false" class="close-information" src="imgs/close.png">
+                </div>
+                <div>
+                    <p>
+                        The school operates for approximately to 8 hours. Beginning from Sundays to Thursdays, the college section
+                        begins its activities from 8 am to nearly 4 pm, while the nursery and primary section
+                        begins its activities from 8 am to 3 pm. The nursery and primary section does not operate on
+                        Sundays. On Fridays, the college section closes at 12:15 pm, while the nursery and primary section 
+                        closes at 12:00 pm.
+                    </p>
+                </div>
+            </div>
+            <div class="information">
+                <div class="information-header">
+                    <p class="header-title">Add a New User</p>
+                    <img draggable="false" class="close-information" src="imgs/close.png">
+                </div>
+                <div>
+                    <p>Click <a href="signup">here</a> to register a new user.</p>
+                </div>
+            </div>
+            <div class="information">
+                <div class="information-header">
+                    <p class="header-title">Add a New Student</p>
+                    <img draggable="false" class="close-information" src="imgs/close.png">
+                </div>
+                <div>
+                    <p>Click <a href="register_student">here</a> to register a new student.</p>
+                </div>
+            </div>
+            <div class="information">
+                <div class="information-header">
+                    <p class="header-title">Remove a Student</p>
+                    <img draggable="false" class="close-information" src="imgs/close.png">
+                </div>
+                <div style="margin: 1rem 0;">
+                    <label for="student_name">Student's name</label><br>
+                    <input student-name id="student_name" type="text" placeholder="Name of the student..."><br>
+                    <label for="student_class">Student's class</label><br>
+                    <select student-class>
+                        <% classes.forEach(studentClass => { %>
+                            <option> <%= studentClass %> </option>
+                        <% }) %>
+                    </select><br>
+                    <label for="student_parent">Parent name</label><br>
+                    <input student-parent id="student_parent" type="text" placeholder="The parent of the student..."><br>
+                    <button remove-student>Remove Student</button>
+                </div>
+            </div>
+            <div class="information">
+                <div class="information-header">
+                    <p class="header-title">Remove a User</p>
+                    <img draggable="false" class="close-information" src="imgs/close.png">
+                </div>
+                <div style="margin: 1rem 0;">
+                    <label for="username">Username</label><br>
+                    <input username id="username" type="text" placeholder="The username..."><br>
+                    <label for="username">User type</label><br>
+                    <select options>
+                        <option>Staff</option>
+                        <option>Parent</option>
+                    </select><br>
+                    <button remove-user>Remove User</button>
+                </div> 
+            </div>
+            <div class="information">
+                <div class="information-header">
+                    <p class="header-title">Students' Result Management System</p>
+                    <img draggable="false" class="close-information" src="imgs/close.png">
+                </div>
+                <div>
+                    <p>Click <a href="register_student">here</a> to enter the SRMS.</p>
+                </div>
+            </div>
+            <div class="information">
+                <div class="information-header">
+                    <p class="header-title">Send a Message</p>
+                    <img draggable="false" class="close-information" src="imgs/close.png">
+                </div>
+                <div>
+                    <label for="recipient_field">Recipient</label><br>
+                    <input recipient-field type="text" placeholder="Enter the recipient's name here..."><br>
+                    <div style="margin: 1rem 0 1rem 0;">
+                        <input id="staff-radio-button" name="recipient_option" type="radio" value="staff">
+                        <label for="staff-radio-button">Staff</label><br>
+                        <input id="parent-radio-button" name="recipient_option" type="radio" value="parent">
+                        <label for="parent-radio-button">Parent</label><br>
+                        <input id="ht-radio-button" name="recipient_option" type="radio" value="admin">
+                        <label for="ht-radio-button">Head teacher</label><br>
+                        <input id="fo-radio-button" name="recipient_option" type="radio" value="finance">
+                        <label for="fo-radio-button">Financial officer</label><br>
+                    </div>
+                    <p>Message content</p>
+                    <textarea class="message-content" placeholder="Type your message here..."></textarea><br>
+                    <button send-message>Send Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/principal-dashboard.js"></script>
+
+<%- include('./partials/footer.ejs') %>

@@ -1,0 +1,222 @@
+<%- include('./partials/srms_headers.ejs') %>
+
+    <div class="top-head">
+        <p class="srms-top-text">Students' Results Management System</p>
+    </div>
+    <div class="navigations-side">
+        <img class="hide-navigation-icon" src="imgs/close.png" alt="Hide navigation icon">
+        <ul>
+            <li class="side-link">Process a new result</li>
+            <li class="side-link">Update existing result</li>
+            <li class="side-link">View result</li>
+            <li class="side-link">Upload result</li>
+        </ul>
+    </div>    
+    <img class="unhide-navigation-icon" src="imgs/menu.png" alt="Show navigation">
+    <p class="welcome-text">
+        Welcome to Salsabeel Tahfeez College SRMS
+    </p>
+    <div class="information">
+        <div class="information-header">
+            <p class="header-title">Process a New Result</p>
+            <img draggable="false" class="close-information" src="imgs/close.png">
+        </div>
+        <div class="wrapper">
+            <p class="subhead">Basic Information</p>
+            <div class="process-result-form">
+                <div>
+                    <label for="student-name">Student's name<sup>*</sup></label><br>
+                    <input id="student-name" type="text" placeholder="Enter the student's fullname...">
+                </div>
+                <div>
+                    <label for="examination-year">Examination Year<sup>*</sup></label><br>
+                    <select id="examination-year">
+                        <option>2021</option>
+                        <option>2022</option>
+                        <option>2023</option>
+                        <option>2024</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="examination-term">Examination term<sup>*</sup></label><br>
+                    <select id="examination-term">
+                        <option>First term</option>
+                        <option>Second term</option>
+                        <option>Third term</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <p class="subhead">Subjects Selection</p>
+            <div class="subject-selection">
+                <div>
+                    <input type="checkbox" id="arabic">
+                    <label subject for="arabic">Arabic</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="agric">
+                    <label subject for="agric">Agricultural Science</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="science">
+                    <label subject for="science">Basic Science</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="civic">
+                    <label subject for="civic">Civic Education</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="computer">
+                    <label subject for="computer">Computer Studies</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="english">
+                    <label subject for="english">English</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="fiqh">
+                    <label subject for="fiqh">Fiqh</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="hadith">
+                    <label subject for="hadith">Hadith</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="economics">
+                    <label subject for="economics">Home Economics</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="islamic">
+                    <label subject for="islamic">Islamic Studies</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="mathematics">
+                    <label subject for="mathematics">Mathematics</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="qur'an">
+                    <label subject for="qur'an">Qur'an</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="tajweed">
+                    <label subject for="tajweed">Tajweed</label>
+                </div>
+            </div>
+            <button select-subjects>Select</button>
+        </div>
+        <div class="wrapper subjects-scores-table">
+            <p class="subhead">Subjects and Scores</p>
+            <table width="100%">
+                <thead>
+                    <th>Subjects</th>
+                    <th>CA Scores</th>
+                    <th>Examination Scores</th>
+                </thead>
+                <tbody scores-table-body>
+
+                </tbody>
+            </table>
+            <button process-result>Process</button>
+        </div>
+        <div class="wrapper result-preview">
+            <p class="subhead">Result Preview</p>
+            <p>Student's name: <b><span student-name-text></span></b></p>
+            <p>Examination year: <b><span examination-year-text></span></b></p>
+            <table width="100%">
+                <thead>
+                    <th>Subjects</th>
+                    <th>CA Scores</th>
+                    <th>Examination Scores</th>
+                    <th>Total Scores</th>
+                    <th>Grades</th>
+                </thead>
+                <tbody preview-table-body>
+
+                </tbody>
+            </table>
+            <p>Total Score: <b><span total-score-text></span></b></p>
+            <p>Average: <b><span average-text></span></b></p>
+            <button upload-result>Upload Result</button>
+        </div>
+    </div>
+    <div class="information">
+        <div class="information-header">
+            <p class="header-title">Update Existing Result</p>
+            <img draggable="false" class="close-information" src="imgs/close.png">
+        </div>
+        <div class="wrapper">
+            <p class="subhead">Basic Information</p>
+            <div class="process-result-form">
+                <div>
+                    <label for="name">Student's name<sup>*</sup></label><br>
+                    <input id="name" type="text" placeholder="Enter the student's fullname...">
+                </div>
+                <div>
+                    <label for="exam-year">Examination Year<sup>*</sup></label><br>
+                    <select id="exam-year">
+                        <option>2021</option>
+                        <option>2022</option>
+                        <option>2023</option>
+                        <option>2024</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="exam-term">Examination term<sup>*</sup></label><br>
+                    <select id="exam-term">
+                        <option>First term</option>
+                        <option>Second term</option>
+                        <option>Third term</option>
+                    </select>
+                </div>
+            </div>
+            <button fetch-result>Fetch Result</button>
+        </div>
+        <div class="wrapper result-update">
+            <p class="subhead">Modify Result</p>
+            <p>Student's name: <b><span class="student-name-text"></span></b></p>
+            <p>Examination year: <b><span class="examination-year-text"></span></b></p>
+            <p>Examination term: <b><span class="examination-term-text"></span></b></p>
+            <table>
+                <thead>
+                    <th>Subjects</th>
+                    <th>CA Scores</th>
+                    <th>Examination Scores</th>
+                    <th>Total Scores</th>
+                    <th>Grades</th>
+                </thead>
+                <tbody update-table>
+
+                </tbody>
+            </table>
+            <button update-result>Update Result</button>
+        </div>
+    </div>
+    <div class="information">
+        <div class="information-header">
+            <p class="header-title">View Result</p>
+            <img draggable="false" class="close-information" src="imgs/close.png">
+        </div>
+        <div>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content processed-results-card">
+                        <p class="card-title">Processed Results</p>
+                        <p class="card-details">4</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="information">
+        <div class="information-header">
+            <p class="header-title">Upload Result</p>
+            <img draggable="false" class="close-information" src="imgs/close.png">
+        </div>
+        <div>
+            
+        </div>
+    </div>
+        
+
+<%- include('./partials/footer.ejs') %>
